@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function Order(){
+            var order = "dear";
+            order = order +document.forms[0].Name.value
+            order = order + "you have ordered a laptop with size"
+            if(document.forms[0].size.options[0].selected){
+                order = order + "small"
+            
+            }
+            if(document.forms[0].size.options[1].selected){
+                order = order + "medium";
+            }
+            if(document.forms[0].size.options[2].selected){
+                order = order + "large"
+            }
+            order = order + "the order will be delievered in a"
+            if(documents.forms[0].packaging[0].checked){
+                order = order + "cardboard box"
+            }
+            if(document,forms[0].packaging[1].checked){
+                order = order + "styrofoam-insulated container"
+            }
+            order = order + "to the address:"
+            order = order + document.forms[0].address.value
+            alert(order)
+
+            
+            
+
+         }
+         
+        
+
+
+    </script>
+</head>
+<body>
+    <h3>
+        java
+    </h3>
+    <form action="mailto:shop@codecracker.com" method="post" onsubmit="Order()" enctype="text/plain">
+        Name: <input type="text" size="20"><br>
+        <br>
+        <br>
+
+        
+        address: <input name="address" size="20"><br><br>
+        laptop size: <select name="size">
+            <option>small</option>
+            <option selected>medium</option>
+            <option>large</option>
+
+        </select>
+        <br>
+        <br>
+        packiging: <input type="radio" name="packaging">cardboard box
+        <input type="radio" name="packaging">syrofoam- insulated container <br>
+        <br>
+        <input type="submit" value="placeorder now">
+
+
+    </form>
+    
+</body>
+</html>
